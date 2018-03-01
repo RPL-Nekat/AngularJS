@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Belajar AngularJs</title>
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script  type="text/javascript" src="js/MainController/MainController.js"></script>
+<body ng-app="FirstApp">
+	<div ng-controller="MainController">
+		{{title}}
+		<hr/>
+		<table border="1" cellspacing="0">
+			<tr>
+				<th>userId</th>
+				<th>id</th>
+				<th>title</th>
+				<th>body</th>
+			</tr>
+			<tr ng-repeat="tampil in post">
+				<td>{{tampil.userId}}</td>
+				<td>{{tampil.id}}</td>
+				<td>{{tampil.title}}</td>
+				<td>{{tampil.body}}</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
